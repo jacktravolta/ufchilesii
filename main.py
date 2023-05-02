@@ -23,7 +23,7 @@ g_err1 = '{"data": { "Error": "No se encontraron registros en SII.cl para el añ
 g_port = 5555
 g_host = "0.0.0.0"
 
-### Genera URL segun año indicado, las url antes de 2012 son diferente se valida ###
+### Genera URL segun año indicado, las url antes de 2012 son diferente, se valida ###
 def gen_url(aa):
     urld = "valores_y_fechas"
     if int(aa) < 2013:
@@ -129,17 +129,13 @@ def main(f):
 ### script modo servicio ###
 def service():
     app = Flask(__name__)
-
     @app.route('/')
     def none():
         return(g_err0)
-
     @app.route('/api/<string:f>/')
     def ini(f):
         return main(f)
-
     app.run(host=g_host, port=g_port)
-    
 service()
 
 
