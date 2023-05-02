@@ -10,7 +10,7 @@ La API devuelve el resultado por dia,mes,año en formato JSON
 {"data": { "dia": "1", "mes": "Enero","anio": "2021","UF": "29.069,39"}}
 
 ## instalación
-
+```
 git clone https://github.com/jacktravolta/ufchilesii
 
 cd ufchilesii
@@ -20,7 +20,7 @@ mkdir repo
 pip3 install -r requirements.txt
 
 python3 main.py
-
+```
 ## Testing
 
 pytest
@@ -30,7 +30,7 @@ pytest
 #### Get UF por fecha
 
 ```https
-  GET /api/01-02-2022
+  GET http:/127.0.0.1/api/01-02-2022
 ```
 
 ## Authors
