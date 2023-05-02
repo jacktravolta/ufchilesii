@@ -30,7 +30,7 @@ pytest
 #### Get UF por fecha
 
 ```https
-  GET http:/127.0.0.1:5556/api/01-02-2022
+  GET http://127.0.0.1:5555/api/01-02-2022
 ```
 
 ## Authors
