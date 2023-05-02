@@ -7,7 +7,7 @@ import os.path, time
 from flask import Flask
 
 #==========================================
-# Title:  Extrae reportes de UF SII-cl y permite consultas por dia-mes-año
+# Title:  Extrae reportes de UF SII.cl y permite consultas por dia-mes-año
 # Author: juan.espinoza.castro88@gmail.com
 # Date:   02 may 2023
 #==========================================
@@ -93,6 +93,7 @@ def import_uf_array(dd,mm,aa,f):
         return 404    
 
 ### Compara fecha modificacion de archivo reporte v/s fecha de la consulta, determina si se actualiza fichero ###
+### El objetivo es actualizar el archivo solo una vez por dia y asì no llenar de get por consulta al sitio de sii.cl ###
 def comp_file(url,f):
     if os.path.exists(f):
         m = os.path.getmtime(f)
@@ -138,6 +139,7 @@ def service():
         return main(f)
 
     app.run(host=g_host, port=g_port)
+    
 service()
 
 
