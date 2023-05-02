@@ -21,16 +21,19 @@ pip3 install -r requirements.txt
 
 python3 main.py
 ```
-## Testing
-```
-pytest
-```
+
 ## API Reference
 
 #### Get UF por fecha
 
 ```https
   GET http://127.0.0.1:5555/api/01-02-2022
+```
+
+
+## Testing
+```
+pytest
 ```
 
 ## Authors
