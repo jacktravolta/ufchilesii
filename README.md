@@ -1,15 +1,14 @@
 
 # Recupera valor UF por fecha desdes SII.CL
 
-Este script recibe como parametro una fecha formato: dd-mm-aaaa 
-Consulta a la web de servicio impuestos internos, 
-autogenera la URL respectiva con el año indicado,
-guarda los resultados por año en formato csv.
-Devuelve el resultado formato JSON
+Este script recibe como parametro una fecha formato: dd-mm-aaaa,
+consulta a la web de servicio impuestos internos https://sii.cl, 
+autogenera la URL respectiva con el año indicado, guarda los resultados por año en formato csv.
+La API devuelve el resultado por dia,mes,año en formato JSON
 
 {"data": { "dia": "1", "mes": "Enero","anio": "2021","UF": "29.069,39"}}
 
-## Instalaciòn
+## instalación
 
 git clone https://github.com/jacktravolta/ufchilesii
 
